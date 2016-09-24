@@ -1,0 +1,91 @@
+footer {
+    background-color: #666;
+    color: #f8f8f8;
+}
+
+footer .social {
+    display: block;
+    margin-top: 30px;
+}
+
+footer .social a {
+    margin: 0 8px;
+    padding: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+footer .social a i {
+    width: 1em;
+}
+
+footer .social a {
+    border: 2px solid #ffffff;
+}
+
+footer .social a i {
+    color: #ffffff;
+}
+
+footer .social a:hover {
+    background: #ffffff;
+}
+
+footer .social a:hover i {
+    color: #f85439;
+}
+
+/* All OWL related Css entries */
+
+#owl-demo .item{
+  background: #ffffff;
+  padding: 5px 0px;
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#owl-demo .item img{
+  max-width: 90%;
+  height: 120px;
+}
+
+/* End of Owl related stuff */
+
+#testimonials {
+    background-repeat: no-repeat;
+    background-image: url(http://xplor.co.in/wp-content/uploads/2013/03/burj-1030x457.jpg);
+    background-position: center center;         
+
+    background-attachment: scroll; 
+        
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;   
+}
+
+#testimonials h2 {
+    color: #ffffff;
+}
+
+.panel-primary > .panel-body-custom {
+color: #666; 
+}
+
+.text-heading {
+color: black;
+font-weight: bold;
+}
