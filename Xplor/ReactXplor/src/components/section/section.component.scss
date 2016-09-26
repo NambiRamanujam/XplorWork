@@ -1,0 +1,32 @@
+.section {
+  padding:10px 0;
+}
+
+.text-heading {
+color: black;
+font-weight: bold;
+}
+
+.panel-primary > .panel-body-custom {
+  color: rgb(102, 102, 102);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  padding: 5px 0;
+}
+.radio-inline, .checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.panel-heading {
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 122, 183);
+  border-color: rgb(51, 122, 183);
+}

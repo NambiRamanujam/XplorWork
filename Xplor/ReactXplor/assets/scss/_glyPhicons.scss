@@ -1,0 +1,50 @@
+.glyphicon {
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+/* Sizes */
+.glyPhiconSize-medium {
+  font-size: 22px;
+  padding: 2px;
+}
+.glyPhiconSize-18 {
+  font-size: 18px;
+}
+/* Colors */
+.glyPhiconYellow {
+  color: #ceae52;
+}
+.glyPhiconGreen {
+  color: green;
+}
+.glyPhiconRed {
+  color: red;
+}
+.glyPhiconSearchColor {
+  color: #428bca;
+}
+.glyPhiconRotate {
+  @include box-shadow(1px 1px 3px gray);
+  @include border-radius(2px);
+  @include transition( all 0.5s ease);
+  border: 1px solid gray;
+  padding: 3px;
+  font-size: 20px!important;
+  &:hover {
+    @include transform(rotate(360deg));
+    }
+}
+
+.glyhpiconMandatoryInValid{
+  font-size: 12px;
+  color: #E73C06;
+  vertical-align: top !important;
+}
+
+.glyhpiconMandatoryValid{
+  font-size: 12px;
+  color: #428bca;
+  vertical-align: top !important;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "xplor",
+  "description": "Xplor Honeymoon Site",
+  "main": "app.js",
+  "authors": [
+    "venknar"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-bootstrap": "~1.0.3",
+    "angular-route": "~1.4.8",
+    "angular-toastr": "~1.6.0",
+    "angular-touch": "~1.4.9",
+    "animate.css": "~3.5.1",
+    "bootstrap": "~3.3.6",
+    "font-awesome": "fontawesome#~4.5.0",
+    "jquery": "~2.2.0",
+    "jquery.easing": "~1.3.1",
+    "Merriweather-Fontface": "merriweather-fontface#*",
+    "open-sans-fontface": "~1.4.2",
+    "wow": "wowjs#~1.1.2",
+    "owl-carousel": "~1.3.2"
+  },
+  "resolutions": {
+    "angular": "1.4.8"
+  }
+}
