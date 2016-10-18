@@ -7,8 +7,8 @@ class AsideComponent extends Component {
   render() {
     let settings = {
       autoplay: true,
-      autoplaySpeed: 1000,
-      slidesToShow: 4,
+      autoplaySpeed: 10000,
+      slidesToShow: 3,
       slidesToScroll: 1,
       infinite:true,
       nextArrow:<span />,

@@ -1,0 +1,40 @@
+.grid-section {
+  padding:20px;
+  background: #f05f40;
+}
+.grid-section .row .grid {
+  margin:10px 0;
+}
+.grid {
+  border: 1px solid black;
+  background: #fff;
+  overflow: visible;
+  //box-shadow: 5px 5px 3px gray;
+  height: auto;
+  min-height: 210px;
+}
+
+.destinationDetails{
+  min-height: 135px;
+}
+
+.destination h3 {
+  background: #337ab7;
+  color: #fff;
+  margin: 0 !important;
+  padding: 4px 4px;
+}
+.destinationImage img {
+  height:100px;
+  width:200px;
+  //padding: 10px;
+}
+
+.description {
+  background: #FAFAFA;
+}
+
+.knowMore {
+  width: 120px;
+  margin: auto;
+}

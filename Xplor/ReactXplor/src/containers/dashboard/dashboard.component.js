@@ -6,6 +6,7 @@ import HeaderComponent from '../../components/header/header.component';
 import SectionComponent from '../../components/section/section.component';
 import AsideComponent from '../../components/aside/aside.component';
 import FooterComponent from '../../components/footer/footer.component';
+import GridComponent from '../../components/grid/grid.component';
 
 import './dashboard.component.scss';
 
@@ -16,6 +17,7 @@ class DashboardComponent extends Component {
         <NavbarComponent />
         <HeaderComponent />
         <SectionComponent />
+        <GridComponent />
         <AsideComponent />
         <FooterComponent />
       </div>
