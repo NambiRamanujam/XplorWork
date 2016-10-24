@@ -27,7 +27,7 @@ build: off
 notifications:
 - provider: Email
   to:
-  - rajaram@rxnt.com
+  - venknar@gmail.com
   subject: 'Build failed: Prescriber Dashboard'
   message: The continuous integration build failed.
   on_build_success: false

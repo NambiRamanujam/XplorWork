@@ -29,4 +29,16 @@ DashboardComponent.propTypes = {
 
 };
 
+const mapStateToProps = (state) => {
+  return {
+
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  }
+}
+
 export default DashboardComponent;

@@ -1,8 +1,26 @@
 import React , {Component,PropTypes} from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as gridActions from './actions';
+
+import DestinationDetailComponent from './popups/destination-detail.component';
 
 import './grid.component.scss';
 
 class GridComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+  }
+  showModal(city) {
+    this.props.actions.toggleDestinationModal(true, city);
+  }
+
+  hideModal() {
+    this.props.actions.toggleDestinationModal(false)
+  }
   render() {
     let gridData = [
                       {
@@ -135,20 +153,41 @@ class GridComponent extends Component {
               </div>
             </div>
             <div className="knowMore">
-              <input type="button" className="btn btn-primary" value="Know More" />
+              <input type="button" className="btn btn-primary" value="Know More" onClick={this.showModal.bind(this, data.name)} />
             </div>
           </div>
         </div>
       );
-    })
+    }.bind(this));
+    console.log(this.props.showModal);
     return(
           <div className="grid-section">
             <div className="row">
               {grids}
             </div>
+            {this.props.showModal ? <DestinationDetailComponent show={this.props.showModal} closeCallBack={this.hideModal} cityName={this.props.cityName} /> : null}
           </div>
     );
   }
 }
 
-export default GridComponent;
+GridComponent.propTypes = {
+  showModal: PropTypes.bool,
+  cityName: PropTypes.string
+};
+
+
+const mapStateToProps = (state) => {
+  return {
+    showModal: state.gridReducer.showModal,
+    cityName: state.gridReducer.cityName
+ };
+};
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(gridActions, dispatch)
+ };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GridComponent);

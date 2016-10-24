@@ -38,3 +38,34 @@
   width: 120px;
   margin: auto;
 }
+
+.close {
+  color: #fff !important;
+  opacity: 1.0 !important;
+}
+
+.modalHeader {
+  background: #337ab7;
+  color: #fff;
+}
+.modal-content {
+  min-height: 600px;
+}
+.modal-body {
+  min-height: 500px;
+}
+
+.react-tab-panel__tab-title  {
+  background: #f05f40;
+  color: #fff !important;
+}
+.react-tab-panel__tab-strip--theme-default .react-tab-panel__tab-title:hover:not(.react-tab-panel__tab-title--active) {
+  color: #337ab7 !important;
+}
+.react-tab-panel__tab-title.react-tab-panel__tab-title--after-active {
+  //color: #337ab7 !important;
+}
+
+.react-tab-panel__tab-strip--theme-default.react-tab-panel__tab-strip--tab-position-top .react-tab-panel__tab-title--active {
+    border-top: 3px solid #337ab7 !important;
+}
