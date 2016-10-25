@@ -4,7 +4,8 @@ import { bindActionCreators } from 'redux';
 
 import * as gridActions from './actions';
 
-import DestinationDetailComponent from './popups/destination-detail.component';
+import DestinationDetailComponent from './popups/package-details/destination-detail.component';
+import ContactUsComponent from './popups/contact-us/contact-us-modal.component';
 
 import './grid.component.scss';
 
@@ -12,20 +13,31 @@ class GridComponent extends Component {
   constructor(props) {
     super(props);
     this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
+    this.hideDestinationModal = this.hideDestinationModal.bind(this);
+    this.contactUs = this.contactUs.bind(this);
+    this.hideContactModal = this.hideContactModal.bind(this);
   }
   showModal(city) {
     this.props.actions.toggleDestinationModal(true, city);
   }
 
-  hideModal() {
+  hideDestinationModal() {
     this.props.actions.toggleDestinationModal(false)
   }
+
+  contactUs() {
+    this.props.actions.toggleContactModal(true);
+  }
+
+  hideContactModal() {
+    this.props.actions.toggleContactModal(false);
+  }
+
   render() {
     let gridData = [
                       {
-                      	name: "Goa1",
-                      	thumbnail: "../../../assets/images/Xplor/goa1.jpg",
+                      	name: "Goa",
+                      	thumbnail: "../../../assets/images/Xplor/goa.jpg",
                       	descriptionList: [
                       		"Located at north Goa",
                       		"flights inclusive",
@@ -41,25 +53,25 @@ class GridComponent extends Component {
 
                       },
                       {
-                      	name: "Goa2",
-                      	thumbnail: "../../../assets/images/Xplor/goa2.jpg",
+                      	name: "Bangkok",
+                      	thumbnail: "../../../assets/images/Xplor/bangkok.jpg",
                       	descriptionList: [
-                      		"Located at north Goa",
+                      		"Located at north Bangkok",
                       		"flights inclusive",
                       		"Breakfast incliuded",
                       		"Accodomation in quality hotels"
                       	],
                       	placesCovered: [
-                      		"Goa1",
-                      		"Goa2",
-                      		"Goa3"
+                      		"Bangkok1",
+                      		"Bangkok2",
+                      		"Bangkok3"
                       	],
-                      	pricePerAdult: 9999,
+                      	pricePerAdult: 14999,
 
                       },
                       {
-                      	name: "Singapore1",
-                      	thumbnail: "../../../assets/images/Xplor/singapore1.jpg",
+                      	name: "Singapore",
+                      	thumbnail: "../../../assets/images/Xplor/singapore.jpg",
                       	descriptionList: [
                       		"Located at north singapore",
                       		"flights inclusive",
@@ -71,46 +83,29 @@ class GridComponent extends Component {
                       		"Singapore2",
                       		"Singapore3"
                       	],
-                      	pricePerAdult: 9999,
+                      	pricePerAdult: 20000,
 
                       },
                       {
-                      	name: "Singapore2",
-                      	thumbnail: "../../../assets/images/Xplor/singapore2.jpg",
+                      	name: "Malaysia",
+                      	thumbnail: "../../../assets/images/Xplor/malaysia.jpg",
                       	descriptionList: [
-                      		"Located at north Singapore",
+                      		"Located at north Malaysia",
                       		"flights inclusive",
                       		"Breakfast incliuded",
                       		"Accodomation in quality hotels"
                       	],
                       	placesCovered: [
-                      		"Singapore1",
-                      		"Singapore2",
-                      		"Singapore3"
+                      		"Malaysia1",
+                      		"Malaysia2",
+                      		"Malaysia3"
                       	],
-                      	pricePerAdult: 9999,
+                      	pricePerAdult: 24999,
 
                       },
                       {
-                      	name: "Mauritius1",
-                      	thumbnail: "../../../assets/images/Xplor/mauritius1.jpg",
-                      	descriptionList: [
-                      		"Located at north Mauritius",
-                      		"flights inclusive",
-                      		"Breakfast incliuded",
-                      		"Accodomation in quality hotels"
-                      	],
-                      	placesCovered: [
-                      		"Mauritius1",
-                      		"Mauritius2",
-                      		"Mauritius3"
-                      	],
-                      	pricePerAdult: 9999,
-
-                      },
-                      {
-                      	name: "Mauritius2",
-                      	thumbnail: "../../../assets/images/Xplor/mauritius2.jpg",
+                      	name: "Mauritius",
+                      	thumbnail: "../../../assets/images/Xplor/mauritius.jpg",
                       	descriptionList: [
                       		"Located at north Mauritius",
                       		"flights inclusive",
@@ -122,7 +117,24 @@ class GridComponent extends Component {
                       		"Mauritius2",
                       		"Mauritius3"
                       	],
-                      	pricePerAdult: 9999,
+                      	pricePerAdult: 13999,
+
+                      },
+                      {
+                      	name: "Dubai",
+                      	thumbnail: "../../../assets/images/Xplor/dubai.jpg",
+                      	descriptionList: [
+                      		"Located at north Dubai",
+                      		"flights inclusive",
+                      		"Breakfast incliuded",
+                      		"Accodomation in quality hotels"
+                      	],
+                      	placesCovered: [
+                      		"Dubai1",
+                      		"Dubai2",
+                      		"Dubai3"
+                      	],
+                      	pricePerAdult: 30000,
 
                       }
                    ];
@@ -159,28 +171,31 @@ class GridComponent extends Component {
         </div>
       );
     }.bind(this));
-    console.log(this.props.showModal);
+    console.log(this.props.showDestinationModal);
     return(
           <div className="grid-section">
             <div className="row">
               {grids}
             </div>
-            {this.props.showModal ? <DestinationDetailComponent show={this.props.showModal} closeCallBack={this.hideModal} cityName={this.props.cityName} /> : null}
+            {this.props.showDestinationModal ? <DestinationDetailComponent show={this.props.showDestinationModal} closeCallBack={this.hideDestinationModal} cityName={this.props.cityName} contactCallback={this.contactUs} /> : null}
+            {this.props.showContactModal ? <ContactUsComponent show={this.props.showContactModal} closeCallBack={this.hideContactModal} />: null}
           </div>
     );
   }
 }
 
 GridComponent.propTypes = {
-  showModal: PropTypes.bool,
-  cityName: PropTypes.string
+  showDestinationModal: PropTypes.bool,
+  cityName: PropTypes.string,
+  showContactModal: PropTypes.bool
 };
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (store) => {
   return {
-    showModal: state.gridReducer.showModal,
-    cityName: state.gridReducer.cityName
+    showDestinationModal: store.gridReducer.showDestinationModal,
+    cityName: store.gridReducer.cityName,
+    showContactModal: store.gridReducer.showContactModal
  };
 };
 

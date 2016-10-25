@@ -47,12 +47,27 @@
 .modalHeader {
   background: #337ab7;
   color: #fff;
+  margin-bottom: 10px;
 }
-.modal-content {
-  min-height: 600px;
+
+.destinationBody {
+  padding: 0 15px !important;
+  min-height: 400px;
+  .buttons {
+    margin-bottom: 10px;
+  }
 }
-.modal-body {
-  min-height: 500px;
+
+.contactBody {
+  padding: 0 15px !important;
+  min-height: 200px;
+  .buttons {
+    margin-bottom: 10px;
+  }
+}
+
+.detailTabs{
+  min-height: 350px !important;
 }
 
 .react-tab-panel__tab-title  {
@@ -69,3 +84,20 @@
 .react-tab-panel__tab-strip--theme-default.react-tab-panel__tab-strip--tab-position-top .react-tab-panel__tab-title--active {
     border-top: 3px solid #337ab7 !important;
 }
+
+
+/*@media only screen and (max-width: 768px) {
+  .modal-content {
+    min-height: 300px;
+    min-width: 350px;
+    margin: 0 -25px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    min-height: 150px;
+    min-width: 180px;
+    margin: 0 -15px !important;
+  }
+}*/

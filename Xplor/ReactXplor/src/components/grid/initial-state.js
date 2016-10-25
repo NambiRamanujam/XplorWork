@@ -1,4 +1,5 @@
 export default {
-  showModal: false,
-  cityName: ''
+  showDestinationModal: false,
+  cityName: '',
+  showContactModal: false
 }

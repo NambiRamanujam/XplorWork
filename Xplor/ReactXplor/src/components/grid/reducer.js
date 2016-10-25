@@ -6,13 +6,24 @@ export default function gridReducer(state = initialState, action) {
     case types.CMP_GRID_SHOW_DESTINATION_MODAL:
       return {
         ...state,
-        showModal: true,
+        showDestinationModal: true,
         cityName: action.city
       };
     case types.CMP_GRID_HIDE_DESTINATION_MODAL:
       return {
         ...state,
-        showModal: false
+        showDestinationModal: false
+      };
+    case types.CMP_GRID_SHOW_CONTACT_MODAL:
+      return {
+        ...state,
+        showContactModal: true,
+        showDestinationModal: false
+      };
+    case types.CMP_GRID_HIDE_CONTACT_MODAL:
+      return {
+        ...state,
+        showContactModal: false
       };
 
     default:

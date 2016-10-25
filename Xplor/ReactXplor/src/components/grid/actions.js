@@ -14,3 +14,17 @@ export function toggleDestinationModal(show, city) {
     }
   }
 }
+
+export function toggleContactModal(show) {
+  return function(dispatch) {
+    if(show) {
+      dispatch({
+        type: gridTypes.CMP_GRID_SHOW_CONTACT_MODAL        
+      });
+    } else {
+      dispatch({
+        type: gridTypes.CMP_GRID_HIDE_CONTACT_MODAL
+      });
+    }
+  }
+}
