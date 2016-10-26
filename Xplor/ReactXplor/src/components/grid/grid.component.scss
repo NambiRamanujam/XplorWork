@@ -1,6 +1,7 @@
 .grid-section {
   padding:20px;
-  background: #f05f40;
+  border-top: 1px solid #000;
+  color: #000 !important;
 }
 .grid-section .row .grid {
   margin:10px 0;
@@ -55,6 +56,9 @@
   min-height: 400px;
   .buttons {
     margin-bottom: 10px;
+    button{
+      margin-left: 5px;
+    }
   }
 }
 
@@ -63,6 +67,9 @@
   min-height: 200px;
   .buttons {
     margin-bottom: 10px;
+    button{
+      margin-left: 5px;
+    }
   }
 }
 
@@ -85,19 +92,19 @@
     border-top: 3px solid #337ab7 !important;
 }
 
-
-/*@media only screen and (max-width: 768px) {
-  .modal-content {
-    min-height: 300px;
-    min-width: 350px;
-    margin: 0 -25px !important;
-  }
+.commentsArea {
+  overflow: auto;
+  resize: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .modal-content {
-    min-height: 150px;
-    min-width: 180px;
-    margin: 0 -15px !important;
-  }
-}*/
+.contactLegend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}

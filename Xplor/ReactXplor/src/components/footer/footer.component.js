@@ -30,7 +30,7 @@ class FooterComponent extends Component {
               </p>
 
               <h3 className="text-left">Connect</h3>
-              <button className="btn btn-lg btn-danger" ng-click="contactUs()">Get in Touch</button><span>&nbsp;&nbsp;&nbsp;</span>
+              <button className="btn btn-lg btn-primary">Get in Touch</button><span>&nbsp;&nbsp;&nbsp;</span>
 
             </div>
           </div>

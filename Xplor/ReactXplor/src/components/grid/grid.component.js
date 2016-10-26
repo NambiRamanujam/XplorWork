@@ -39,10 +39,10 @@ class GridComponent extends Component {
                       	name: "Goa",
                       	thumbnail: "../../../assets/images/Xplor/goa.jpg",
                       	descriptionList: [
-                      		"Located at north Goa",
-                      		"flights inclusive",
-                      		"Breakfast incliuded",
-                      		"Accodomation in quality hotels"
+                      		"Located at North Goa",
+                      		"Flights inclusive",
+                      		"Breakfast included",
+                      		"Accomodation in quality hotels"
                       	],
                       	placesCovered: [
                       		"Goa1",
@@ -56,10 +56,10 @@ class GridComponent extends Component {
                       	name: "Bangkok",
                       	thumbnail: "../../../assets/images/Xplor/bangkok.jpg",
                       	descriptionList: [
-                      		"Located at north Bangkok",
-                      		"flights inclusive",
-                      		"Breakfast incliuded",
-                      		"Accodomation in quality hotels"
+                      		"Located at North Bangkok",
+                      		"Flights inclusive",
+                      		"Breakfast included",
+                      		"Accomodation in quality hotels"
                       	],
                       	placesCovered: [
                       		"Bangkok1",
@@ -73,10 +73,10 @@ class GridComponent extends Component {
                       	name: "Singapore",
                       	thumbnail: "../../../assets/images/Xplor/singapore.jpg",
                       	descriptionList: [
-                      		"Located at north singapore",
-                      		"flights inclusive",
-                      		"Breakfast incliuded",
-                      		"Accodomation in quality hotels"
+                      		"Located at North singapore",
+                      		"Flights inclusive",
+                      		"Breakfast included",
+                      		"Accomodation in quality hotels"
                       	],
                       	placesCovered: [
                       		"Singapore1",
@@ -90,10 +90,10 @@ class GridComponent extends Component {
                       	name: "Malaysia",
                       	thumbnail: "../../../assets/images/Xplor/malaysia.jpg",
                       	descriptionList: [
-                      		"Located at north Malaysia",
-                      		"flights inclusive",
-                      		"Breakfast incliuded",
-                      		"Accodomation in quality hotels"
+                      		"Located at North Malaysia",
+                      		"Flights inclusive",
+                      		"Breakfast included",
+                      		"Accomodation in quality hotels"
                       	],
                       	placesCovered: [
                       		"Malaysia1",
@@ -107,10 +107,10 @@ class GridComponent extends Component {
                       	name: "Mauritius",
                       	thumbnail: "../../../assets/images/Xplor/mauritius.jpg",
                       	descriptionList: [
-                      		"Located at north Mauritius",
-                      		"flights inclusive",
-                      		"Breakfast incliuded",
-                      		"Accodomation in quality hotels"
+                      		"Located at North Mauritius",
+                      		"Flights inclusive",
+                      		"Breakfast included",
+                      		"Accomodation in quality hotels"
                       	],
                       	placesCovered: [
                       		"Mauritius1",
@@ -124,10 +124,10 @@ class GridComponent extends Component {
                       	name: "Dubai",
                       	thumbnail: "../../../assets/images/Xplor/dubai.jpg",
                       	descriptionList: [
-                      		"Located at north Dubai",
-                      		"flights inclusive",
-                      		"Breakfast incliuded",
-                      		"Accodomation in quality hotels"
+                      		"Located at North Dubai",
+                      		"Flights inclusive",
+                      		"Breakfast included",
+                      		"Accomodation in quality hotels"
                       	],
                       	placesCovered: [
                       		"Dubai1",
@@ -173,7 +173,7 @@ class GridComponent extends Component {
     }.bind(this));
     console.log(this.props.showDestinationModal);
     return(
-          <div className="grid-section">
+          <div className="grid-section bg-primary">
             <div className="row">
               {grids}
             </div>

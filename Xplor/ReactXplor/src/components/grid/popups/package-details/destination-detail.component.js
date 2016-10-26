@@ -22,8 +22,10 @@ class DestinationDetailComponent extends Component {
               <Modal.Body className="destinationBody">
                 <div className="row modalHeader">
                   <div className = "col-md-12 col-sm-12 col-xs-12">
-                    <button type= "button" className ="close pull-right" onClick = {this.close} > &times;</button>
-                    <h3>{this.props.cityName}</h3>
+
+                    <h3>{this.props.cityName}
+                      <span className="pull-right"><button type= "button" className ="close" onClick = {this.close} > &times;</button></span>
+                    </h3>
                   </div>
                 </div>
                 <div className="row">
@@ -38,8 +40,8 @@ class DestinationDetailComponent extends Component {
                         <div tabTitle="Inclusions">
                           <h2>Inclusions</h2>
                         </div>
-                        <div tabTitle="Accodomation">
-                          <h2>Accodomation</h2>
+                        <div tabTitle="Accomodation">
+                          <h2>Accomodation</h2>
                         </div>
                       </TabPanel>
                     </div>

@@ -12,7 +12,7 @@ class SectionComponent extends Component {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <FindPackageFormComponent />
               </div>
-              <div className="col-xs-12 col-sm-8 text-center">
+              <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center">
                   <h4 className="text-left text-heading">International Honeymoon Packages </h4>
                   <p className="text-justify">
                       Do you think that the beautiful journey of your marriage should begin from a beautiful destination? Planning a surprise honeymoon is an ultimate romantic gesture, and the greatest gift you could ever give her. Thomas Cook introduces great honeymoon packages for couples who wish to make their honeymoon the most beautiful and memorable event of their life. From pristine azure beaches and luxury resorts of Maldives and Mauritius to the beautiful landscapes of Switzerland and Thailand, honeymoon packages are abound. Your hunt for the honeymoon destinations is over, as Thomas Cook’s honeymoon packages include the most exotic international honeymoon destinations where you can cherish romantic moments, and bring some unforgettable memories back home.
