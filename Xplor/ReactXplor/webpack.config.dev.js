@@ -3,6 +3,12 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
+const prescriberDashBoardConfig = {
+  PrescriberDashboardApiServices: "http://localhost/ProviderDashboardAPIServices/",
+  EHRLoginUrl: "http://localhost",
+  ClientVersion: "RXVER-123"
+};
+
 export default {
   debug: true,
   devtool: 'cheap-module-eval-source-map', // more info:https://webpack.github.io/docs/build-performance.html#sourcemaps and https://webpack.github.io/docs/configuration.html#devtool
@@ -20,7 +26,8 @@ export default {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'), // Tells React to build in either dev or prod modes. https://facebook.github.io/react/downloads.html (See bottom)
-      __DEV__: true
+      __DEV__: true,
+      prescriberDashBoardConfig: JSON.stringify(prescriberDashBoardConfig)
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
